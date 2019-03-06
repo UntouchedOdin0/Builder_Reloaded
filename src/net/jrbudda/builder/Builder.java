@@ -16,8 +16,8 @@ import net.citizensnpcs.api.CitizensAPI;
 import net.citizensnpcs.api.npc.NPC;
 import net.citizensnpcs.api.trait.TraitInfo;
 import net.citizensnpcs.api.trait.trait.Owner;
-import net.minecraft.server.v1_12_R1.Block;
-import net.minecraft.server.v1_12_R1.Item;
+import net.minecraft.server.v1_11_R1.Block;
+import net.minecraft.server.v1_11_R1.Item;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -247,7 +247,7 @@ public class Builder extends JavaPlugin {
 			StringBuilder sb = new StringBuilder();
 
 			for (int j = 1; j < 137; j++) {
-				sb.append( j+":"+ Util.getLocalItemName(j) +" > " +  (net.minecraft.server.v1_12_R1.Block.getById(j).getDropType(Block.getById(j).getBlockData(), Util.R,-10000)) +":" + Util.getLocalItemName(Item.getId(Block.getById(j).getDropType(Block.getById(j).getBlockData(), Util.R, -10000)))+ "\n" );
+				sb.append( j+":"+ Util.getLocalItemName(j) +" > " +  (net.minecraft.server.v1_11_R1.Block.getById(j).getDropType(Block.getById(j).getBlockData(), Util.R,-10000)) +":" + Util.getLocalItemName(Item.getId(Block.getById(j).getDropType(Block.getById(j).getBlockData(), Util.R, -10000)))+ "\n" );
 			}
 
 			java.io.File f = new File("mats.txt");

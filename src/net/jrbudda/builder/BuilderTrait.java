@@ -13,16 +13,16 @@ import net.citizensnpcs.api.jnbt.CompoundTag;
 import net.citizensnpcs.api.trait.Trait;
 import net.citizensnpcs.api.util.DataKey;
 import net.citizensnpcs.trait.Toggleable;
-import net.minecraft.server.v1_12_R1.BlockPosition;
-import net.minecraft.server.v1_12_R1.NBTTagCompound;
-import net.minecraft.server.v1_12_R1.TileEntity;
+import net.minecraft.server.v1_11_R1.BlockPosition;
+import net.minecraft.server.v1_11_R1.NBTTagCompound;
+import net.minecraft.server.v1_11_R1.TileEntity;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.command.CommandSender;
-import org.bukkit.craftbukkit.v1_12_R1.CraftWorld;
+import org.bukkit.craftbukkit.v1_11_R1.CraftWorld;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.material.MaterialData;
@@ -608,7 +608,7 @@ public class BuilderTrait extends Trait implements Toggleable {
 				BlockPosition bp = new BlockPosition(pending.getX(), pending.getY(), pending.getZ());
 				TileEntity te = cw.getHandle().getTileEntity(bp);	
 				if(te!=null) {
-					te.load(nmsnbt);
+					te.a(nmsnbt);
 				}
 			}
 
